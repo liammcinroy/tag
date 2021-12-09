@@ -1,0 +1,4 @@
+<plugin>
+  <name>geometa</name>
+  <classname>org.plstudio.geometa.DummyPlugin</classname>
+</plugin>
