@@ -1,9 +1,12 @@
 package org.plstudio.toposcala
 
+import org.plstudio.geometa.Funcs._
+
 object Playground {
-  val five = 5
-  val amount = five / 0
   def main(args: Array[String]): Unit = {
-    println(amount)
+    val a: Int = 1
+    println(s"source is 1: $a")
+    val b = detectFunc(a)
+    println(s"and detectFunc: $b")
   }
 }
