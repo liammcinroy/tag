@@ -9,12 +9,11 @@ import nsc.transform._
 import nsc.plugins.Plugin
 import nsc.plugins.PluginComponent
 
-class Funcs
 object Funcs {
 
   def detectFunc(a: Int): Int = a
 
-  def replaceFunc(a: Int): Int = a + 1
+  def replaceFunc(a: Int): String = s"${a + 1}"
 
 }
 
@@ -31,7 +30,7 @@ class DummyAnalyzerPlugin(val global: Global) extends Plugin {
     val phaseName = DummyAnalyzerPlugin.this.name
     override def newTransformer(unit: CompilationUnit) = new DummyTransformer(unit)
 
-    val FuncsSym = symbolOf[Funcs].companionModule
+    val FuncsSym = symbolOf[Funcs.type].module
 
     class DummyTransformer(unit: CompilationUnit) extends Transformer {
       override def transform(tree: Tree): Tree = tree match {
@@ -39,11 +38,13 @@ class DummyAnalyzerPlugin(val global: Global) extends Plugin {
           println(s"changing $y to add another")
           q"val $x: Int = $y + 1"
         }
-        case q"detectFunc($x)" => {
+        case q"detectFunc" => {
           println(s"changing detectFunc to replaceFunc")
-          q"replaceFunc($x)"
+          q"replaceFunc"
         }
-        case _ => super.transform(tree)
+        case _ => {
+          super.transform(tree)
+        }
       }
     }
   }

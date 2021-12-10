@@ -5,8 +5,8 @@ import org.plstudio.geometa.Funcs._
 object Playground {
   def main(args: Array[String]): Unit = {
     val a: Int = 1
-    println(s"source is 1: $a")
+    println(a)
     val b = detectFunc(a)
-    println(s"and detectFunc: $b")
+    println(b)
   }
 }
