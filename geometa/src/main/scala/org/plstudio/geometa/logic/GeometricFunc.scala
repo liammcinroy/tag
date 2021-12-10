@@ -8,6 +8,7 @@ package org.plstudio.geometa.logic
 
 trait GTFunc[T <: GeomTheory] {}
 
+
 trait GTFunc0[
   T <: GeomTheory,
   R <: GTBaseType[T],
@@ -20,7 +21,9 @@ trait GTFunc0[
   Tuple1[
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function0[
+  R
+] {}
 
 trait GTFunc1[
   T <: GeomTheory,
@@ -38,7 +41,10 @@ trait GTFunc1[
     A1,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function1[
+  A1,
+  R
+] {}
 
 trait GTFunc2[
   T <: GeomTheory,
@@ -60,7 +66,11 @@ trait GTFunc2[
     A2,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function2[
+  A1,
+  A2,
+  R
+] {}
 
 trait GTFunc3[
   T <: GeomTheory,
@@ -86,7 +96,12 @@ trait GTFunc3[
     A3,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function3[
+  A1,
+  A2,
+  A3,
+  R
+] {}
 
 trait GTFunc4[
   T <: GeomTheory,
@@ -116,7 +131,13 @@ trait GTFunc4[
     A4,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function4[
+  A1,
+  A2,
+  A3,
+  A4,
+  R
+] {}
 
 trait GTFunc5[
   T <: GeomTheory,
@@ -150,7 +171,14 @@ trait GTFunc5[
     A5,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function5[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  R
+] {}
 
 trait GTFunc6[
   T <: GeomTheory,
@@ -188,7 +216,15 @@ trait GTFunc6[
     A6,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function6[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  R
+] {}
 
 trait GTFunc7[
   T <: GeomTheory,
@@ -230,7 +266,16 @@ trait GTFunc7[
     A7,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function7[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  R
+] {}
 
 trait GTFunc8[
   T <: GeomTheory,
@@ -276,7 +321,17 @@ trait GTFunc8[
     A8,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function8[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  R
+] {}
 
 trait GTFunc9[
   T <: GeomTheory,
@@ -326,7 +381,18 @@ trait GTFunc9[
     A9,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function9[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  R
+] {}
 
 trait GTFunc10[
   T <: GeomTheory,
@@ -380,7 +446,19 @@ trait GTFunc10[
     A10,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function10[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  R
+] {}
 
 trait GTFunc11[
   T <: GeomTheory,
@@ -438,7 +516,20 @@ trait GTFunc11[
     A11,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function11[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  R
+] {}
 
 trait GTFunc12[
   T <: GeomTheory,
@@ -500,7 +591,21 @@ trait GTFunc12[
     A12,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function12[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  R
+] {}
 
 trait GTFunc13[
   T <: GeomTheory,
@@ -566,7 +671,22 @@ trait GTFunc13[
     A13,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function13[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  A13,
+  R
+] {}
 
 trait GTFunc14[
   T <: GeomTheory,
@@ -636,7 +756,23 @@ trait GTFunc14[
     A14,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function14[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  A13,
+  A14,
+  R
+] {}
 
 trait GTFunc15[
   T <: GeomTheory,
@@ -710,7 +846,24 @@ trait GTFunc15[
     A15,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function15[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  A13,
+  A14,
+  A15,
+  R
+] {}
 
 trait GTFunc16[
   T <: GeomTheory,
@@ -788,7 +941,25 @@ trait GTFunc16[
     A16,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function16[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  A13,
+  A14,
+  A15,
+  A16,
+  R
+] {}
 
 trait GTFunc17[
   T <: GeomTheory,
@@ -870,7 +1041,26 @@ trait GTFunc17[
     A17,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function17[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  A13,
+  A14,
+  A15,
+  A16,
+  A17,
+  R
+] {}
 
 trait GTFunc18[
   T <: GeomTheory,
@@ -956,7 +1146,27 @@ trait GTFunc18[
     A18,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function18[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  A13,
+  A14,
+  A15,
+  A16,
+  A17,
+  A18,
+  R
+] {}
 
 trait GTFunc19[
   T <: GeomTheory,
@@ -1046,7 +1256,28 @@ trait GTFunc19[
     A19,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function19[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  A13,
+  A14,
+  A15,
+  A16,
+  A17,
+  A18,
+  A19,
+  R
+] {}
 
 trait GTFunc20[
   T <: GeomTheory,
@@ -1140,7 +1371,29 @@ trait GTFunc20[
     A20,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function20[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  A13,
+  A14,
+  A15,
+  A16,
+  A17,
+  A18,
+  A19,
+  A20,
+  R
+] {}
 
 trait GTFunc21[
   T <: GeomTheory,
@@ -1238,5 +1491,28 @@ trait GTFunc21[
     A21,
     R
   ]
-] with GTFunc[T] {}
+] with GTFunc[T] with Function21[
+  A1,
+  A2,
+  A3,
+  A4,
+  A5,
+  A6,
+  A7,
+  A8,
+  A9,
+  A10,
+  A11,
+  A12,
+  A13,
+  A14,
+  A15,
+  A16,
+  A17,
+  A18,
+  A19,
+  A20,
+  A21,
+  R
+] {}
 

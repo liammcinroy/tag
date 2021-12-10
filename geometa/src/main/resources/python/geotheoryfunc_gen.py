@@ -20,5 +20,9 @@ if __name__ == '__main__':
             print('    A{},'.format(j))
         print('    R')
         print('  ]')
-        print('] with GTFunc[T] {}')
+        print('] with GTFunc[T] with Function{}['.format(i))
+        for j in range(1, i + 1):
+            print('  A{},'.format(j))
+        print('  R')
+        print('] {}')
         print()
