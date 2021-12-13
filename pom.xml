@@ -11,6 +11,7 @@
   <name>Toposcala and Geometa</name>
 
   <modules>
+    <module>geometa-macro</module>
     <module>geometa</module>
     <module>toposcala</module>
   </modules>

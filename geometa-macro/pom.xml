@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.plstudio</groupId>
-  <artifactId>geometa</artifactId>
+  <artifactId>geometa-macro</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>Geometa</name>
+  <name>Geometa-Macros</name>
 
   <parent>
     <groupId>org.plstudio</groupId>
@@ -17,11 +17,6 @@
   </parent>
 
   <dependencies>
-    <dependency>
-      <groupId>org.plstudio</groupId>
-      <artifactId>geometa-macro</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-compiler</artifactId>
