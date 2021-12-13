@@ -7,24 +7,44 @@
 // and not geometric. Hence some formula types may be non-geometric.
 //
 
-package org.plstudio.geometa.logic
+package org.plstudio.geometa.logic.context
 
 // Mark: - Logical Connectives
 //
 
 trait TNeg[
   T <: GeomTheory,
-  F <: GTFormula[T]
-] extends GTFormula[T] {}
+  C <: GTBaseType[T],
+  F <: GTFormula[T, C]
+] extends GTFormula[T, C] {}
 
 trait TForAll[
   T <: GeomTheory,
   Q <: GTBaseType[T],
-  F1 <: GTFormula[T],
-] extends GTFormula[T] {}
+  C1 <: GTBaseType[T],
+  F1 <: GTFormula[T, C1],
+  C <: GTBaseType[T],
+  Assoc <: GTFunc2[
+    T,
+    Q,
+    C1,
+    C,
+    Function2[Q, C1, C]
+  ]
+] extends GTFormula[T, C] {}
 
 trait TImplies[
   T <: GeomTheory,
-  F1 <: GTFormula[T],
-  F2 <: GTFormula[T],
-] extends GTFormula[T] {}
+  C1 <: GTBaseType[T],
+  F1 <: GTFormula[T, C1],
+  C2 <: GTBaseType[T],
+  F2 <: GTFormula[T, C2],
+  C <: GTBaseType[T],
+  Assoc <: GTFunc2[
+    T,
+    C1,
+    C2,
+    C,
+    Function2[C1, C2, C]
+  ]
+] extends GTFormula[T, C] {}
